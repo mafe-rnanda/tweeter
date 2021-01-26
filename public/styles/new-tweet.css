@@ -1,0 +1,26 @@
+.submission {
+  font-family: 'Bungee', sans-serif;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 3px solid #545149;
+  padding-top: 15px;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  color: #ffffff;
+  border: none;
+  padding: 7px;
+}
+
+#tweet-text {
+  width:100%;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  line-height: 1;
+  font-size: 22px;
+  height: 34px;
+  margin-top: 10px;
+}
