@@ -1,3 +1,7 @@
+.new-tweet {
+  margin-top: 30px
+}
+
 .submission {
   font-family: 'Bungee', sans-serif;
   font-size: 18px;
@@ -8,10 +12,18 @@
 }
 
 .tweet-button {
-  background-color: #4056A1;
+  background-color: #545149;
   color: #ffffff;
   border: none;
   padding: 7px;
+}
+
+.tweet-label {
+  font-weight: 700;
+}
+
+.tweet-button:hover {
+  background-color: #B97550;
 }
 
 #tweet-text {
