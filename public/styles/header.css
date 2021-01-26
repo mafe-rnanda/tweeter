@@ -5,10 +5,14 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background-color: #F2C57D;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  /* background-color: #F2C57D;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); */
+  background-color: #95a3a4;
+background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+
 }
 
 header h2 {
   margin-top: 0;
+  color: #F0EFEB;
 }
