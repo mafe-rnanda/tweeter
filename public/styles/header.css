@@ -1,4 +1,4 @@
-header {
+#page-header {
   height: 400px;
   width: 100%;
   display: flex;
@@ -7,10 +7,10 @@ header {
   flex-direction: column;
   background-color: #95a3a4;
   background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
-  margin-top: 90px;
+  margin-top: 99px;
 }
 
-header h2 {
+.username {
   margin-top: 0;
   color: #F0EFEB;
 }

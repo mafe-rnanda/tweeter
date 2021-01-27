@@ -8,15 +8,11 @@
 }
 
 .submitted-tweet:hover .user-handle{
-  display:block;
   color: #CC8614;
+  opacity: 1;
 }
 
 .tweet-header {
-  background-color: #F0EFEB;
-  background-image: none;
-  margin-top: 0;
-  /* border: 3px solid green; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,12 +24,18 @@
   align-items: center;
 }
 
-.username {
+.composed-tweet-profile-pic {
+  font-size: 1.4em;
+}
+
+.composed-tweet-username {
   padding-left: 20px;
 }
 
 .user-handle {
-  display:none;
+  align-self: center;
+  color: #CC8614;
+  opacity: 0;
 }
 
 .composed-tweet-message {
@@ -43,7 +45,6 @@
 }
 
 .tweet-footer {
-  /* border: 3px solid red; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
