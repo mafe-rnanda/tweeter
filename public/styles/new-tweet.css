@@ -30,6 +30,7 @@
   width:100%;
   background-color: transparent;
   border: none;
+  outline: none;
   resize: none;
   line-height: 1;
   font-size: 22px;
