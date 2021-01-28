@@ -6,6 +6,13 @@
 $(document).ready(function () {
 
   const createTweetElement = function (tweet) {
+
+    const escape =  function(str) {
+      let div = document.createElement('div');
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    }
+
     const $tweet = `<article class="submitted-tweet">
         <header class="tweet-header">
           <div class="tweet-user-profile">
@@ -14,7 +21,7 @@ $(document).ready(function () {
           </div>
           <span class="user-handle">${tweet.user.handle}</span>
         </header>
-          <p class="composed-tweet-message">${tweet.content.text}</p>
+        <p class="composed-tweet-message">${escape(tweet.content.text)}</p>
         <footer class="tweet-footer">
           <p class="date-posted">${tweet.created_at}</p>
           <div class="composed-tweeter-icons">
@@ -24,7 +31,8 @@ $(document).ready(function () {
           </div>
         </footer>
       </article>`;
-
+  
+    console.log($tweet)
     return $tweet;
   };
 
@@ -55,19 +63,19 @@ $(document).ready(function () {
   loadtweets();
 
   // AJAX post > send tweet text to the server and get it displaying on the page
-$(".tweet-submission").submit(function(event) {
-  const textArea = $('#tweet-text')
-  if (textArea.val().trim() === "" || textArea.val().length < 0) {
-    alert('Please enter text')
-  } else if (textArea.val().length > 140) {
-    alert('You have exceeded the character limit')
-  } else {
-    $.post('/tweets/', $(this).serialize())
-    loadtweets();
-  }
-  
-  event.preventDefault();
+  $(".tweet-submission").submit(function(event) {
+    const textArea = $('#tweet-text')
+    if (textArea.val().trim() === "" || textArea.val().length < 0) {
+      alert('Please enter text')
+    } else if (textArea.val().length > 140) {
+      alert('You have exceeded the character limit')
+    } else {
+      $.post('/tweets/', $(this).serialize())
+      loadtweets();
+    }
+    
+    event.preventDefault();
 
-});
+  });
 
 });
