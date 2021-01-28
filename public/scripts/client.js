@@ -39,10 +39,18 @@ $(document).ready(function () {
   };
 
 
-  // Implement AJAX for sending (POSTing) the tweet text to the server
+  // AJAX post > send tweet text to the server
 $(".tweet-submission").submit(function(event) {
+  const textArea = $('#tweet-text')
+  if (textArea.val() === "" || textArea.val() == null) {
+    alert('Please enter text')
+  } else if (textArea.val().length > 140) {
+    alert('You have exceeded the character limit')
+  } else {
+    $.post('/tweets/', $(this).serialize())
+  }
+  
   event.preventDefault();
-  $.post('/tweets/', $(this).serialize())
 });
 
 const loadtweets = function() {
