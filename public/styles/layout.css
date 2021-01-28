@@ -30,3 +30,15 @@ body {
   width: 90%;
   align-self: center;
 }
+
+.error-message {
+  color: #fc5f3f;
+  background-color: #f2beac;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px;
+  margin-bottom: 35px;
+  padding: 8px 0;
+  border: 2px solid #fc5f3f;
+  display:none;
+}

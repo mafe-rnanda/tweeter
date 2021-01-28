@@ -32,7 +32,6 @@ $(document).ready(function () {
         </footer>
       </article>`;
   
-    console.log($tweet)
     return $tweet;
   };
 
@@ -66,16 +65,25 @@ $(document).ready(function () {
   $(".tweet-submission").submit(function(event) {
     const textArea = $('#tweet-text')
     if (textArea.val().trim() === "" || textArea.val().length < 0) {
-      alert('Please enter text')
-    } else if (textArea.val().length > 140) {
-      alert('You have exceeded the character limit')
-    } else {
-      $.post('/tweets/', $(this).serialize())
-      loadtweets();
+      $('.error-message').text(` Error: Please enter text`).prepend('<i class="fas fa-exclamation-circle"></i>').slideDown();
+      return false;
     }
+    
+    if (textArea.val().length > 140) {
+      $('.error-message').text(`Error: You have exceeded the character limit`).prepend('<i class="fas fa-exclamation-circle"></i>').slideDown();
+      return false;
+    }
+
+    $('.error-message').slideUp();
+    $.post('/tweets/', $(this).serialize())
+    loadtweets();
+    
     
     event.preventDefault();
 
   });
 
 });
+
+
+      // $('.error-message').empty();
