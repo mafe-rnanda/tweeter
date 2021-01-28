@@ -77,6 +77,8 @@ $(document).ready(function () {
     $('.error-message').slideUp();
     $.post('/tweets/', $(this).serialize())
     loadtweets();
+    $("#tweet-text").val('')
+    $(".counter").text("140");
     
     
     event.preventDefault();
@@ -85,5 +87,3 @@ $(document).ready(function () {
 
 });
 
-
-      // $('.error-message').empty();

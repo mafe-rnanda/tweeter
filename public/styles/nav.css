@@ -1,14 +1,25 @@
 nav {
   background-color: #697268;
+  color: #ffffff;
   padding: 1.5em;
   position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-nav span {
-  font-family: 'Bungee', sans-serif;
-  height: 120px;
-  width: 100%;
-  color: #ffffff;
 
+#logo {
+  font-family: 'Bungee', sans-serif;
+  width: auto;
+  color: #ffffff;
+}
+
+.nav-icon {
+  color: #cc8614;
+}
+
+.compose-button {
+  gap: 15px;
+  display: flex;
 }
