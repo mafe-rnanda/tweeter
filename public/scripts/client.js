@@ -29,6 +29,8 @@ $(document).ready(function () {
   };
 
   const renderTweets = function (tweets) {
+    // remove all children from the <section>
+    $("#tweets-container").empty();
     // loops through tweets
     tweets.forEach((tweet) => {
       // calls createTweetElement for each tweet
@@ -38,32 +40,34 @@ $(document).ready(function () {
     });
   };
 
+  // Display tweets as soon as the page loads
+  const loadtweets = function() {
+    $.ajax({
+      url: '/tweets/',
+      method: 'GET',
+      dataType: 'json',
+      success: (tweet) => {
+        renderTweets(tweet)
+      },
+    })
+  }
 
-  // AJAX post > send tweet text to the server
+  loadtweets();
+
+  // AJAX post > send tweet text to the server and get it displaying on the page
 $(".tweet-submission").submit(function(event) {
   const textArea = $('#tweet-text')
-  if (textArea.val() === "" || textArea.val() == null) {
+  if (textArea.val().trim() === "" || textArea.val().length < 0) {
     alert('Please enter text')
   } else if (textArea.val().length > 140) {
     alert('You have exceeded the character limit')
   } else {
     $.post('/tweets/', $(this).serialize())
+    loadtweets();
   }
   
   event.preventDefault();
+
 });
-
-const loadtweets = function() {
-  $.ajax({
-    url: '/tweets/',
-    method: 'GET',
-    dataType: 'json',
-    success: (tweet) => {
-      renderTweets(tweet)
-    },
-  })
-}
-
-loadtweets();
 
 });
