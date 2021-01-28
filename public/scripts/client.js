@@ -66,32 +66,10 @@ $(document).ready(function () {
   renderTweets(data);
 
 
-  // AJAX POST request
-
-  //$.post( "test.php", $( "#testform" ).serialize() );
-
- 
-
-  // Attach a submit handler to the form
+  // Implement AJAX for sending (POSTing) the tweet text to the server
 $(".tweet-submission").submit(function(event) {
-  
-  // Stop form from submitting normally
   event.preventDefault();
-  console.log('button should not redirect me');
-
-  // serialize the form data for submission to the server
-  const serializedData = $(this).serialize();
-  console.log(serializedData);
-
-  $.ajax({
-    type: "POST",
-    url: '/tweets/',
-    data: serializedData,
-    success: function() {
-      console.log('good job')
-    },
-  });
-
+  $.post('/tweets/', $(this).serialize())
 });
 
 });
