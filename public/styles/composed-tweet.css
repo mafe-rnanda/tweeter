@@ -4,11 +4,11 @@
   margin: 5% 0;
 }
 .submitted-tweet:hover {
-  box-shadow: 5px 10px #CC8614;
+  box-shadow: 5px 10px #cc8614;
 }
 
 .submitted-tweet:hover .user-handle {
-  color: #CC8614;
+  color: #cc8614;
   opacity: 1;
 }
 .submitted-tweet:hover .composed-tweeter-icons {
@@ -20,7 +20,6 @@
   flex-direction: row;
   justify-content: space-between;
   height: auto;
-
 }
 .tweet-user-profile {
   display: flex;
@@ -74,7 +73,6 @@
   opacity: 0;
 }
 
-
 /* Tablet: minimum width of 768px to maximum width of 1024px */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   #tweets-container {
@@ -91,7 +89,6 @@
     font-size: 1rem;
   }
 }
-
 
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {

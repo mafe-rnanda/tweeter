@@ -12,7 +12,7 @@
 
 .username {
   margin-top: 0;
-  color: #F0EFEB;
+  color: #f0efeb;
 }
 
 /* Tablet: minimum width of 768px to maximum width of 1024px */
@@ -31,11 +31,9 @@
     max-height: 40vh;
     max-width: 25vw;
   }
-  
+
   .profile-picture {
     max-width: 15vw;
     padding-top: 10%;
   }
 }
-
-

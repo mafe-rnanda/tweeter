@@ -3,7 +3,7 @@
 }
 
 .submission {
-  font-family: 'Bungee', sans-serif;
+  font-family: "Bungee", sans-serif;
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -12,8 +12,8 @@
 }
 
 #tweet-text {
-  width:100%;
-  background-color: rgba(222, 220, 211, 0.50);
+  width: 100%;
+  background-color: rgba(222, 220, 211, 0.5);
   border: none;
   outline: none;
   resize: none;
@@ -25,7 +25,7 @@
   background-color: #545149;
   color: #ffffff;
   border: none;
-  outline:none;
+  outline: none;
   padding: 1.3%;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .tweet-button:hover {
-  background-color: #CC8614;
+  background-color: #cc8614;
 }
 
 .minus-counter {
@@ -54,7 +54,6 @@
   .submission {
     font-size: 1.1rem;
   }
-
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
