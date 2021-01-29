@@ -13,7 +13,7 @@
 
 #tweet-text {
   width:100%;
-  background-color: transparent;
+  background-color: rgba(222, 220, 211, 0.50);
   border: none;
   outline: none;
   resize: none;
