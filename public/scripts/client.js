@@ -5,6 +5,9 @@
  */
 $(document).ready(function () {
 
+  // const time = new Date(tweetObjects.created_at)
+  // const currentTime = Date.now()
+  // const dayDif = Math.floor((currentTime - time) / 1000 / 60 / 60 / 24)
   const createTweetElement = function (tweet) {
 
     const escape =  function(str) {
@@ -16,7 +19,7 @@ $(document).ready(function () {
     const $tweet = `<article class="submitted-tweet">
         <header class="tweet-header">
           <div class="tweet-user-profile">
-            <img src="${tweet.user.avatars}"/>
+            <img class="avatar" src="${tweet.user.avatars}"/>
             <p class="composed-tweet-username">${tweet.user.name}</p>
           </div>
           <span class="user-handle">${tweet.user.handle}</span>

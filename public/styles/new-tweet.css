@@ -1,21 +1,32 @@
 .new-tweet {
-  margin-top: 30px
+  margin-top: 5%;
 }
 
 .submission {
   font-family: 'Bungee', sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   display: flex;
   justify-content: space-between;
   border-top: 3px solid #545149;
-  padding-top: 15px;
+  padding-top: 3%;
+}
+
+#tweet-text {
+  width:100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 1rem;
+  margin-top: 2%;
 }
 
 .tweet-button {
   background-color: #545149;
   color: #ffffff;
   border: none;
-  padding: 7px;
+  outline:none;
+  padding: 1.3%;
 }
 
 .tweet-label {
@@ -26,16 +37,37 @@
   background-color: #CC8614;
 }
 
-#tweet-text {
-  width:100%;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  resize: none;
-  font-size: 22px;
-  margin-top: 10px;
-}
-
 .minus-counter {
   color: #fc5f3f;
+}
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .new-tweet {
+    font-size: 1.5rem;
+  }
+
+  #tweet-text {
+    font-size: 1.3rem;
+  }
+
+  .submission {
+    font-size: 1.1rem;
+  }
+
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    font-size: 1.7rem;
+  }
+
+  #tweet-text {
+    font-size: 1.5rem;
+  }
+
+  .submission {
+    font-size: 1.2rem;
+  }
 }

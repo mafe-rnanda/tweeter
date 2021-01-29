@@ -3,6 +3,7 @@
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
@@ -35,35 +36,33 @@
         <span><strong>Write</strong> a new tweet</span>
       </div>
     </nav>
-    <header id="page-header">
-      <div class="profilePicture">
-        <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="username">
-        <h2>Your Name</h2>
-      </div>
-    </header>
+    <div class="body-container">
+      <header id="page-header">
+        <img class="profile-picture" src="/images/profile-hex.png"> 
+          <br/>
+          <h2 class="username">Your Name</h2>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <div class="error-message"></div>
-        <form class="tweet-submission" action="/tweets/" method="POST">
-          <label class="tweet-label" for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div class="submission">
-            <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="error-message"></div>
+          <form class="tweet-submission" action="/tweets/" method="POST">
+            <label class="tweet-label" for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="submission">
+              <button type="submit" class="tweet-button">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
 
-      <section id="tweets-container">
-        <article class="submitted-tweet">
-        </article>
-      </section>
+        <section id="tweets-container">
+          <article class="submitted-tweet">
+          </article>
+        </section>
 
-    </main>
+      </main>
+    </div>
   </body>
 </html>

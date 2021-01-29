@@ -1,7 +1,7 @@
 nav {
   background-color: #697268;
   color: #ffffff;
-  padding: 1.5em;
+  padding: 5%;
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,6 +20,24 @@ nav {
 }
 
 .compose-button {
-  gap: 15px;
+  gap: 1.5vw;
   display: flex;
+}
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav {
+  background-color: #95a3a4;
+  background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
+  font-size: 1.5rem;
+  padding: 3% 5%;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  nav {
+    font-size: 1.5rem;
+    padding: 3% 5%;
+    }
 }

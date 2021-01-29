@@ -1,5 +1,5 @@
 #page-header {
-  height: 400px;
+  height: 45vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -7,10 +7,35 @@
   flex-direction: column;
   background-color: #95a3a4;
   background-image: url("https://www.transparenttextures.com/patterns/old-map.png");
-  margin-top: 99px;
+  margin-top: 10%;
 }
 
 .username {
   margin-top: 0;
   color: #F0EFEB;
 }
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  #page-header {
+    margin-top: 7%;
+    font-size: 1.5rem;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  #page-header {
+    margin-top: 15%;
+    font-size: 1.5rem;
+    max-height: 40vh;
+    max-width: 25vw;
+  }
+  
+  .profile-picture {
+    max-width: 15vw;
+    padding-top: 10%;
+  }
+}
+
+

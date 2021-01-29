@@ -8,6 +8,7 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+  scroll-behavior: smooth;
 }
 
 /*
@@ -17,15 +18,12 @@ html {
 body {
   color: #545149;
   background-color: #F0EFEB;
-  font-size: 24px;
+  font-size: 16px;
   font-family:'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 .container {
   width: 90%;
   align-self: center;
@@ -36,9 +34,43 @@ body {
   background-color: #f2beac;
   text-align: center;
   font-weight: 700;
-  border-radius: 5px;
-  margin-bottom: 35px;
-  padding: 8px 0;
+  border-radius: 0.5vw;
+  margin-bottom: 5%;
+  padding: 1% 0;
   border: 2px solid #fc5f3f;
   display:none;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .error-message {
+    font-size: 1.3rem;
+  }
+}
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  body {
+    align-items: center;
+  }
+  .error-message {
+    font-size: 1.3rem;
+  }
+
+  .body-container {
+    flex-direction: row;
+    padding: 8% 0;
+    width: 90%;
+    gap: 3%;
+  }
+  .container {
+    flex-grow: 3;
+  }
 }
