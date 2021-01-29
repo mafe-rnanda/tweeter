@@ -4,10 +4,10 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
+  dayjs().format();
+  dayjs.extend(window.dayjs_plugin_relativeTime);
+
   const createTweetElement = function (tweet) {
-    const time = new Date(tweet.created_at);
-    const currentTime = Date.now();
-    const daysAgo = Math.floor((currentTime - time) / 1000 / 60 / 60 / 24);
 
     // Avoid XSS
     const escape = function (str) {
@@ -26,7 +26,7 @@ $(document).ready(function () {
         </header>
         <p class="composed-tweet-message">${escape(tweet.content.text)}</p>
         <footer class="tweet-footer">
-          <p class="date-posted">${daysAgo} days ago</p>
+          <p class="date-posted">${dayjs(tweet.created_at).fromNow()}</p>
           <div class="composed-tweeter-icons">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
