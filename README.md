@@ -18,6 +18,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of main page (desktop view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/responsive-design-desktop-layout.png?raw=true)
-!["Screenshot of hovering over a composed tweet (tablet view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/hovering-over-tweet.png?raw=true)
-!["Screenshot of error message displaying (tablet view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/display-error-message.png?raw=true)
+!["Screenshot of main page (desktop view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/desktop-layout.png?raw=true)
+!["Screenshot of hovering over a composed tweet (tablet view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/hover-over-tweet.png?raw=true)
+!["Screenshot of error message displaying (tablet view)"](https://github.com/mafe-rnanda/tweeter/blob/master/docs/error-message.png?raw=true)
